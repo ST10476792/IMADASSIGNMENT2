@@ -33,51 +33,51 @@ class MainActivity2 : AppCompatActivity() {
         val nextBtn = findViewById<Button>(R.id.nextBtn)
 
         val answers = arrayOf(false, false, true, false, true)
-        var currentQuestionIndex = 0
+        var index = 0
         var score = 0
 
         fun goToResultScreen() {
             val intent = Intent(this, MainActivity3::class.java)
-            intent.putExtra("SCORE", score)
-            intent.putExtra("QUESTIONS", questions)
-            intent.putExtra("ANSWERS", answers)
             startActivity(intent)
         }
-    // intent put extra add code to push to next screen
+        // intent put extra add code to push to next screen
 
         fun loadNextQuestion() {
-            if (currentQuestionIndex < questions.size) {
-                questionTextView.text = questions[currentQuestionIndex]
-            } else {
-                goToResultScreen()
-            }
-    }
-    // question.size is no. of question in array
+            questionTextView.text = questions[index]
+        }
+
+        for (i in questions.indices){
+            questionTextView.text = " ${i + 1}: ${questions[i]}"
+            questionTextView.text = " ${answers[i]}"
+        }
+
+
 
         fun checkAnswer(userAnswer: Boolean) {
-            if (userAnswer == answers[currentQuestionIndex]) {
-                answerTextview.text = "Correct"
+            val correct = answers[index]
+            if (userAnswer == correct) {
+                answerTextview.text = "Correct!"
                 score++
             } else {
-                answerTextview.text = "Incorrect"
+                answerTextview.text = "Incorrect!"
             }
-            currentQuestionIndex++
-            loadNextQuestion()
-            //moving on to next question
         }
 
         trueBtn.setOnClickListener { checkAnswer(true) }
         falseBtn.setOnClickListener { checkAnswer(false) }
 
-
-
-
-
-
-
-
+        nextBtn.setOnClickListener {
+            index++
+            if (index < questions.size) {
+                loadNextQuestion()
+            } else {
+                val intent = Intent(this, MainActivity3::class.java)
+                intent.putExtra("SCORE", score)
+                startActivity(intent)
+                finish()
+                // intent put extra add code to push to next screen
+            }
         }
-
-
     }
-    }
+}
+

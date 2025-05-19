@@ -5,6 +5,70 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/cinammonroll4"
     tools:context=".MainActivity3">
 
+    <TextView
+        android:id="@+id/reviewTextview"
+        android:layout_width="354dp"
+        android:layout_height="304dp"
+        android:background="#cfeafc"
+        android:gravity="center"
+        android:text=" "
+        android:textColor="#142833"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33" />
+
+    <TextView
+        android:id="@+id/feedbackTextview"
+        android:layout_width="377dp"
+        android:layout_height="53dp"
+        android:background="#cfeafc"
+        android:gravity="center"
+        android:text="Lets check your results"
+        android:textColor="#142833"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.098" />
+
+    <Button
+        android:id="@+id/reviewBtn"
+        android:layout_width="310dp"
+        android:layout_height="61dp"
+        android:text="REVIEW"
+        android:textColor="#142833"
+        android:textSize="26sp"
+        android:backgroundTint="#78a3c2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.715" />
+
+    <Button
+        android:id="@+id/exitBtn"
+        android:layout_width="310dp"
+        android:layout_height="61dp"
+        android:text="EXIT"
+        android:textColor="#142833"
+        android:textSize="26sp"
+        android:backgroundTint="#78a3c2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.852" />
 </androidx.constraintlayout.widget.ConstraintLayout>
