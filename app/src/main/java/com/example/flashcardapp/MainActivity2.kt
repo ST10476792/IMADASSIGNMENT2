@@ -13,12 +13,14 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity2 : AppCompatActivity() {
     private val questions = arrayOf(
-        "Jack the Ripper's crimes took place in New York City during the early 1900s",
+        "Jack the Ripper's crimes took place in New York City during the early 1900s \n ",
         "During the Great Depression, people made clothes out of food sacks like flour bags and potato sacks, and food distributors responded by switching to plain, unprinted sacks to discourage the trend \n ",
         "Henry VIII had six wives \n",
         "During World War II, a Great Dane named Juliana was awarded the Medal of Honor for her service \n",
         "Cleopatra wasn’t actually Egyptian \n"
     )
+
+    val answers = arrayOf(false, false, true, false, true)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,11 +34,10 @@ class MainActivity2 : AppCompatActivity() {
         val falseBtn = findViewById<Button>(R.id.falseBtn)
         val nextBtn = findViewById<Button>(R.id.nextBtn)
 
-        val answers = arrayOf(false, false, true, false, true)
         var index = 0
         var score = 0
 
-        fun goToResultScreen() {
+        fun goToScoreScreen() {
             val intent = Intent(this, MainActivity3::class.java)
             startActivity(intent)
         }
@@ -44,14 +45,8 @@ class MainActivity2 : AppCompatActivity() {
 
         fun loadNextQuestion() {
             questionTextView.text = questions[index]
+            answerTextview.text = ""
         }
-
-        for (i in questions.indices){
-            questionTextView.text = " ${i + 1}: ${questions[i]}"
-            questionTextView.text = " ${answers[i]}"
-        }
-
-
 
         fun checkAnswer(userAnswer: Boolean) {
             val correct = answers[index]
@@ -76,8 +71,10 @@ class MainActivity2 : AppCompatActivity() {
                 startActivity(intent)
                 finish()
                 // intent put extra add code to push to next screen
+
             }
         }
+        loadNextQuestion()
     }
 }
 
