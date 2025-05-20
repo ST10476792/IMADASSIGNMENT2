@@ -23,16 +23,13 @@ class MainActivity3 : AppCompatActivity() {
 
         if (score >= 4 && score < 6) {
             //if the time of day is Morning,the textview will display Yoghurt and granola as a meal
-            reviewTextview.text = "Great job. Well done! \uD83C\uDF89"
+            reviewTextview.text = "Great job. Well done! \uD83C\uDF89" + "You scored $score out of 5 \n"
         } else if (score > 1  && score < 4) {
             //if the time of day is Mid morning,the textview will display Cream puffs as a snack
-            reviewTextview.text = "Not bad! Keep trying\uD83D\uDCAA"
+            reviewTextview.text = "Not bad! Keep trying\uD83D\uDCAA" + "You scored $score out of 5 \n"
         } else {
-            reviewTextview.text = " Time to hit the books\uD83D\uDCDA"
+            reviewTextview.text = " Time to hit the books\uD83D\uDCDA" + "You scored $score out of 5 \n"
         }
-
-        feedbackTextview.text = "You scored $score out of 5"
-
 
         reviewBtn.setOnClickListener {
                  reviewTextview.text = """
