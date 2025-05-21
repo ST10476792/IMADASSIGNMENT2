@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity2 : AppCompatActivity() {
+    //questions in array
     private val questions = arrayOf(
         "Jack the Ripper's crimes took place in New York City during the early 1900s \n ",
         "During the Great Depression, people made clothes out of food sacks like flour bags and potato sacks, and food distributors responded by switching to plain, unprinted sacks to discourage the trend \n ",
@@ -19,7 +20,7 @@ class MainActivity2 : AppCompatActivity() {
         "During World War II, a Great Dane named Juliana was awarded the Medal of Honor for her service \n",
         "Cleopatra wasn’t actually Egyptian \n"
     )
-
+    //question answers in array
     val answers = arrayOf(false, false, true, false, true)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,20 +35,23 @@ class MainActivity2 : AppCompatActivity() {
         val falseBtn = findViewById<Button>(R.id.falseBtn)
         val nextBtn = findViewById<Button>(R.id.nextBtn)
 
+        //index is 0 so it starts from first question
         var index = 0
         var score = 0
 
+        //navigates from second screen to third screen
         fun goToScoreScreen() {
             val intent = Intent(this, MainActivity3::class.java)
             startActivity(intent)
         }
-        // intent put extra add code to push to next screen
 
+        //loads next question and clears the textview which displays if its incorrect/correct
         fun loadNextQuestion() {
             questionTextView.text = questions[index]
             answerTextview.text = ""
         }
 
+        //checks whether chosen answer matches the answer array
         fun checkAnswer(userAnswer: Boolean) {
             val correct = answers[index]
             if (userAnswer == correct) {
@@ -58,9 +62,11 @@ class MainActivity2 : AppCompatActivity() {
             }
         }
 
+        //when true/false button is clicked,checks whether answer matches
         trueBtn.setOnClickListener { checkAnswer(true) }
         falseBtn.setOnClickListener { checkAnswer(false) }
 
+        //when next button is clicked,proceeds to next question...if last question reached then it navigates to the third screen which is the score screen
         nextBtn.setOnClickListener {
             index++
             if (index < questions.size) {

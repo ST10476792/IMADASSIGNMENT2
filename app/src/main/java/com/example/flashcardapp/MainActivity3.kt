@@ -19,13 +19,14 @@ class MainActivity3 : AppCompatActivity() {
         val reviewBtn = findViewById<Button>(R.id.reviewBtn)
         val exitBtn = findViewById<Button>(R.id.exitBtn)
 
+        //pass the score between activities
         val score = intent.getIntExtra("SCORE", 0)
 
         if (score >= 4 && score < 6) {
-            //if the time of day is Morning,the textview will display Yoghurt and granola as a meal
+            //if score is greater than or equal to 4 and smaller than 6,then displays a com
             reviewTextview.text = "Great job. Well done! \uD83C\uDF89" + "You scored $score out of 5 \n"
         } else if (score > 1  && score < 4) {
-            //if the time of day is Mid morning,the textview will display Cream puffs as a snack
+            //
             reviewTextview.text = "Not bad! Keep trying\uD83D\uDCAA" + "You scored $score out of 5 \n"
         } else {
             reviewTextview.text = " Time to hit the books\uD83D\uDCDA" + "You scored $score out of 5 \n"

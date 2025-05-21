@@ -19,12 +19,18 @@ class MainActivity : AppCompatActivity() {
         val flashcardText1 = findViewById<TextView>(R.id.flashcardText1)
         val flashcardText2 = findViewById<TextView>(R.id.flashcardText2)
 
+        //when button is pressed,it navigates from first screen to second screen
         startButton.setOnClickListener()
         {
             val intent = Intent(this, MainActivity2::class.java)
 
             startActivity(intent)
 
+            //Title:How to navigate from one screen to another screen
+            //Author:https://stackoverflow.com/
+            //Date:21 May 2025
+            //Version:1
+            //Available:https://stackoverflow.com/questions/1102050/how-to-navigate-from-one-screen-to-another-screen
 
         }
     }
