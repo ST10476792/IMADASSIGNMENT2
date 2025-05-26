@@ -23,6 +23,12 @@ class MainActivity2 : AppCompatActivity() {
     //question answers in array
     val answers = arrayOf(false, false, true, false, true)
 
+    //Title:Arrays
+    //Author: https://kotlinlang.org/
+    //Date:21 May 2025
+    //Version:1
+    //Available:https://kotlinlang.org/docs/arrays.html
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -45,6 +51,7 @@ class MainActivity2 : AppCompatActivity() {
             startActivity(intent)
         }
 
+
         //loads next question and clears the textview which displays if its incorrect/correct
         fun loadNextQuestion() {
             questionTextView.text = questions[index]
@@ -61,6 +68,12 @@ class MainActivity2 : AppCompatActivity() {
                 answerTextview.text = "Incorrect!"
             }
         }
+        //Title:Check incoming answer with answer in array object
+        //Author: https://stackoverflow.com/
+        //Date:21 May 2025
+        //Version:1
+        //Available:https://stackoverflow.com/questions/65619688/check-incoming-answer-with-answer-in-array-object
+
 
         //when true/false button is clicked,checks whether answer matches
         trueBtn.setOnClickListener { checkAnswer(true) }
@@ -76,7 +89,7 @@ class MainActivity2 : AppCompatActivity() {
                 intent.putExtra("SCORE", score)
                 startActivity(intent)
                 finish()
-                // intent put extra add code to push to next screen
+                // intent put extra adds code to push to next screen
 
             }
         }

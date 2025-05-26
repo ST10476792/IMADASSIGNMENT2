@@ -23,15 +23,17 @@ class MainActivity3 : AppCompatActivity() {
         val score = intent.getIntExtra("SCORE", 0)
 
         if (score >= 4 && score < 6) {
-            //if score is greater than or equal to 4 and smaller than 6,then displays a com
+            //if score is greater than or equal to 4 and smaller than 6,then displays a compliment with their score out of 5
             reviewTextview.text = "Great job. Well done! \uD83C\uDF89" + "You scored $score out of 5 \n"
         } else if (score > 1  && score < 4) {
-            //
+            //if score is greater than 1 and smaller than 4,then displays a text to keep trying with their score out of 5
             reviewTextview.text = "Not bad! Keep trying\uD83D\uDCAA" + "You scored $score out of 5 \n"
         } else {
+            //if score doesn't fit into those,then it is most likely 1 or below and they need to study more
             reviewTextview.text = " Time to hit the books\uD83D\uDCDA" + "You scored $score out of 5 \n"
         }
 
+        //when review button is clicked,the feedback textview will display the answers with explanations for all questions
         reviewBtn.setOnClickListener {
                  reviewTextview.text = """
                 1.  False.Jack the Ripper committed his murders in London, England, specifically in the Whitechapel district, during the late 1880s - most notably in 1888  
@@ -45,7 +47,7 @@ class MainActivity3 : AppCompatActivity() {
                 5.  True.She was actually Greek! 
             """.trimIndent()
         }
-
+        //pressing exit button will close the app
         exitBtn.setOnClickListener {
             finishAffinity()
         }
