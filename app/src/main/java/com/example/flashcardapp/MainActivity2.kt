@@ -58,6 +58,12 @@ class MainActivity2 : AppCompatActivity() {
             answerTextview.text = ""
         }
 
+        //Title:Kotlin Functions
+        //Author: https://www.w3schools.com/
+        //Date:26 May 2025
+        //Version:1
+        //Available:https://www.w3schools.com/kotlin/kotlin_functions.php
+
         //checks whether chosen answer matches the answer array
         fun checkAnswer(userAnswer: Boolean) {
             val correct = answers[index]
