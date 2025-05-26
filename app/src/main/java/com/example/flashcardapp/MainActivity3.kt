@@ -33,6 +33,18 @@ class MainActivity3 : AppCompatActivity() {
             reviewTextview.text = " Time to hit the books\uD83D\uDCDA" + "You scored $score out of 5 \n"
         }
 
+        //Title:Kotlin If...Else
+        //Author: https://www.w3schools.com/
+        //Date:26 May 2025
+        //Version:1
+        //Available:https://www.w3schools.com/kotlin/kotlin_conditions.php
+
+        //Title:Conditional Expressions
+        //Author:codecademy.com
+        //Date:26 May 2025
+        //Version:1
+        //Available:https://www.codecademy.com/learn/learn-kotlin/modules/learn-kotlin-conditional-expressions/cheatsheet
+
         //when review button is clicked,the feedback textview will display the answers with explanations for all questions
         reviewBtn.setOnClickListener {
                  reviewTextview.text = """
@@ -50,6 +62,14 @@ class MainActivity3 : AppCompatActivity() {
         //pressing exit button will close the app
         exitBtn.setOnClickListener {
             finishAffinity()
+
+            //Title:How can I close the whole Kotlin app when I click a button
+            //Author:https://stackoverflow.com
+            //Date:26 May 2025
+            //Version:1
+            //Available:https://stackoverflow.com/questions/52164887/how-can-i-close-the-whole-kotlin-app-when-i-click-a-button
+
+
         }
     }
 }
