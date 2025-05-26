@@ -24,7 +24,7 @@ class MainActivity3 : AppCompatActivity() {
 
         if (score >= 4 && score < 6) {
             //if score is greater than or equal to 4 and smaller than 6,then displays a compliment with their score out of 5
-            reviewTextview.text = "Great job. Well done! \uD83C\uDF89" + "You scored $score out of 5 \n"
+            reviewTextview.text = "Great job. Well done! \uD83C\uDF89" + "You scored $score out of 5 \n "
         } else if (score > 1  && score < 4) {
             //if score is greater than 1 and smaller than 4,then displays a text to keep trying with their score out of 5
             reviewTextview.text = "Not bad! Keep trying\uD83D\uDCAA" + "You scored $score out of 5 \n"

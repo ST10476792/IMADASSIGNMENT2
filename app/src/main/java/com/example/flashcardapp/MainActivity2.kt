@@ -20,6 +20,8 @@ class MainActivity2 : AppCompatActivity() {
         "During World War II, a Great Dane named Juliana was awarded the Medal of Honor for her service \n",
         "Cleopatra wasn’t actually Egyptian \n"
     )
+    // /n means moving onto next line
+
     //question answers in array
     val answers = arrayOf(false, false, true, false, true)
 
