@@ -36,7 +36,7 @@ class MainActivity2 : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main2)
 
-        //loops goes through all questions and answers
+        //a loop that goes through all questions and answers
         for (i in questions.indices) {
             val question = questions[i]
             val answer = answers[i]
@@ -59,7 +59,6 @@ class MainActivity2 : AppCompatActivity() {
             val intent = Intent(this, MainActivity3::class.java)
             startActivity(intent)
         }
-
 
         //loads next question and clears the textview which displays if its incorrect/correct
         fun loadNextQuestion() {
