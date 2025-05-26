@@ -34,6 +34,13 @@ class MainActivity2 : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main2)
 
+        //loops goes through all questions and answers
+        for (i in questions.indices) {
+            val question = questions[i]
+            val answer = answers[i]
+        }
+
+        //view by ids
         val headingTextview = findViewById<TextView>(R.id.headingTextview)
         val questionTextView = findViewById<TextView>(R.id.questionTextview)
         val answerTextview = findViewById<TextView>(R.id.answerTextview)
@@ -56,6 +63,10 @@ class MainActivity2 : AppCompatActivity() {
         fun loadNextQuestion() {
             questionTextView.text = questions[index]
             answerTextview.text = ""
+
+            //Enables buttons so that user can pick either true or false again
+            trueBtn.isEnabled = true
+            falseBtn.isEnabled = true
         }
 
         //Title:Kotlin Functions
@@ -73,7 +84,17 @@ class MainActivity2 : AppCompatActivity() {
             } else {
                 answerTextview.text = "Incorrect!"
             }
+            //this disables the buttons after user has picked either true or false,preventing them from changing their answer
+            trueBtn.isEnabled = false
+            falseBtn.isEnabled = false
         }
+
+        //Title:How to disable a button in Kotlin
+        //Author: https://stackoverflow.com/
+        //Date:21 May 2025
+        //Version:1
+        //Available:https://stackoverflow.com/questions/55645273/how-to-disable-a-button-in-kotlin
+
         //Title:Check incoming answer with answer in array object
         //Author: https://stackoverflow.com/
         //Date:21 May 2025
